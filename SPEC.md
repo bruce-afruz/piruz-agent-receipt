@@ -14,7 +14,7 @@ authentication and contracts.
 Use HTTPS. A publisher serves a signed manifest at a documented endpoint or
 advertises it in an HTTP Link header:
 
-`Link: <https://publisher.example/agent-rights/article.parp>; rel="https://piruzafruz.org/rel/agent-rights"; type="application/vnd.piruz.agent-rights+json"`
+`Link: <https://publisher.example/agent-rights/article.parp>; rel="https://github.com/bruce-afruz/piruz-agent-receipt/blob/main/SPEC.md#transport"; type="application/vnd.piruz.agent-rights"`
 
 The absolute relation URI is an RFC 8288 extension relation. It needs no IANA
 registration. The vendor media type is deliberately private to this experimental
@@ -22,8 +22,9 @@ release; it is not an IANA media-type registration.
 
 ## Signed manifest
 
-The manifest is UTF-8 JSON, deterministically encoded with lexicographically
-sorted object keys and no insignificant whitespace. It contains a version,
+The signed body is UTF-8 JSON, deterministically encoded with lexicographically
+sorted object keys and no insignificant whitespace; the wire representation is
+`base64url(body) + "." + base64url(Ed25519 signature)`. It contains a version,
 canonical HTTPS subject URL, publisher name, revision time, SHA-256 digest of the
 served content bytes, license/terms, permissions for retrieval/training/commercial
 use, attribution requirement and optional expiry. An Ed25519 signature covers the
