@@ -23,6 +23,13 @@ should be LLMBOO only after its actual content policy, key storage and consent
 model are reviewed. This is a protocol implementation, not a legal compliance
 service and not an IANA-registered scheme, media type or link relation.
 
+## Join the work
+
+PARP needs independent implementations and security review before it can seek
+neutral shared registry names. See [CONTRIBUTING.md](CONTRIBUTING.md), open a
+GitHub Discussion for ideas, or file an interoperability report. Public deployment
+evidence is welcome only with the deployer's permission.
+
 ## IANA strategy
 
 We use an absolute extension relation and vendor media type during experimentation.
