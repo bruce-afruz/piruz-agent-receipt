@@ -1,0 +1,30 @@
+name: Implementation report
+description: You built a PARP publisher or verifier. Tell us so we can list it.
+labels: [implementation]
+body:
+  - type: input
+    id: repo
+    attributes: { label: Repository or package URL }
+    validations: { required: true }
+  - type: dropdown
+    id: role
+    attributes: { label: What does it do?, options: [Verifier, Publisher, Both] }
+    validations: { required: true }
+  - type: input
+    id: lang
+    attributes: { label: Language / platform }
+  - type: checkboxes
+    id: vectors
+    attributes:
+      label: Conformance
+      options:
+        - label: Passes every valid and invalid case in test-vectors/v0.1.json
+  - type: checkboxes
+    id: independent
+    attributes:
+      label: Independence
+      options:
+        - label: Written without copying this repository's code (counts toward IANA registration)
+  - type: textarea
+    id: notes
+    attributes: { label: Anything unclear in the spec? }

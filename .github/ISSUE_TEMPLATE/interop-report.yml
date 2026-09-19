@@ -1,0 +1,19 @@
+name: Interoperability report
+description: You deployed PARP or tested two implementations against each other.
+labels: [interop]
+body:
+  - type: textarea
+    id: setup
+    attributes: { label: What did you test?, description: Publisher, verifier, versions. }
+    validations: { required: true }
+  - type: textarea
+    id: result
+    attributes: { label: What happened? }
+    validations: { required: true }
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Permission
+      options:
+        - label: I have permission to share these deployment details publicly
+          required: true

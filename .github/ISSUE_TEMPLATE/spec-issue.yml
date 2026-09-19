@@ -1,0 +1,12 @@
+name: Spec question or ambiguity
+description: A sentence in SPEC.md could be read two ways, or something is missing.
+labels: [spec]
+body:
+  - type: textarea
+    id: quote
+    attributes: { label: Quote the text, render: markdown }
+    validations: { required: true }
+  - type: textarea
+    id: problem
+    attributes: { label: How could it be misread, or what is missing? }
+    validations: { required: true }

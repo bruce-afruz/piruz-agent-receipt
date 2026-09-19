@@ -1,6 +1,6 @@
 # Piruz Agent Receipt Protocol (PARP) 0.1
 
-An experimental, open protocol initiated by Piruz Afruz MB, Lithuania.
+An open protocol initiated by Piruz Afruz MB, Lithuania. Version 0.1, released as v0.1.0.
 
 ## Purpose
 
@@ -17,7 +17,7 @@ advertises it in an HTTP Link header:
 `Link: <https://publisher.example/agent-rights/article.parp>; rel="https://github.com/bruce-afruz/piruz-agent-receipt/blob/main/SPEC.md#transport"; type="application/vnd.piruz.agent-rights"`
 
 The absolute relation URI is an RFC 8288 extension relation. It needs no IANA
-registration. The vendor media type is deliberately private to this experimental
+registration. The vendor media type is deliberately private to the 0.1
 release; it is not an IANA media-type registration.
 
 ## Signed manifest

@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Ideas and questions
+    url: https://github.com/bruce-afruz/piruz-agent-receipt/discussions
+    about: Start a discussion before proposing wire-format changes.
+  - name: Adapters for Node, PHP, .NET, Shopify, WordPress, OpenCart
+    url: https://github.com/bruce-afruz/parp-integrations
+    about: Publisher starters live in parp-integrations.

@@ -1,0 +1,63 @@
+{
+  "protocol": "PARP/0.1",
+  "note": "Key is RFC 8032 7.1 TEST 1. Public test material: never sign real manifests with it.",
+  "publicKeyJwk": {
+    "kty": "OKP",
+    "crv": "Ed25519",
+    "x": "11qYAYKxCrfVS_7TyWQHOg7hcvPapiMlrwIaaPcHURo",
+    "alg": "EdDSA",
+    "use": "sig"
+  },
+  "valid": [
+    {
+      "name": "llms.txt manifest with non-ASCII content",
+      "content": "# Example Store\n\n> Café crème, 250 g — €9.50\n",
+      "manifest": {
+        "version": "0.1",
+        "subject": "https://example.com/llms.txt",
+        "publisher": "Example Store",
+        "publishedAt": "2026-09-19T00:00:00Z",
+        "contentSha256": "cbc1a7e9717550ce780c5cf6ecd75c80aadf53c817715a72f310b2f777d13511",
+        "license": "https://example.com/",
+        "use": {
+          "retrieval": "allow",
+          "training": "unspecified",
+          "commercial": "unspecified",
+          "attribution": "required"
+        },
+        "expiresAt": "2099-01-01T00:00:00Z"
+      },
+      "canonical": "{\"contentSha256\":\"cbc1a7e9717550ce780c5cf6ecd75c80aadf53c817715a72f310b2f777d13511\",\"expiresAt\":\"2099-01-01T00:00:00Z\",\"license\":\"https://example.com/\",\"publishedAt\":\"2026-09-19T00:00:00Z\",\"publisher\":\"Example Store\",\"subject\":\"https://example.com/llms.txt\",\"use\":{\"attribution\":\"required\",\"commercial\":\"unspecified\",\"retrieval\":\"allow\",\"training\":\"unspecified\"},\"version\":\"0.1\"}",
+      "token": "eyJjb250ZW50U2hhMjU2IjoiY2JjMWE3ZTk3MTc1NTBjZTc4MGM1Y2Y2ZWNkNzVjODBhYWRmNTNjODE3NzE1YTcyZjMxMGIyZjc3N2QxMzUxMSIsImV4cGlyZXNBdCI6IjIwOTktMDEtMDFUMDA6MDA6MDBaIiwibGljZW5zZSI6Imh0dHBzOi8vZXhhbXBsZS5jb20vIiwicHVibGlzaGVkQXQiOiIyMDI2LTA5LTE5VDAwOjAwOjAwWiIsInB1Ymxpc2hlciI6IkV4YW1wbGUgU3RvcmUiLCJzdWJqZWN0IjoiaHR0cHM6Ly9leGFtcGxlLmNvbS9sbG1zLnR4dCIsInVzZSI6eyJhdHRyaWJ1dGlvbiI6InJlcXVpcmVkIiwiY29tbWVyY2lhbCI6InVuc3BlY2lmaWVkIiwicmV0cmlldmFsIjoiYWxsb3ciLCJ0cmFpbmluZyI6InVuc3BlY2lmaWVkIn0sInZlcnNpb24iOiIwLjEifQ.FmbmPBjRg79yIzKhQK7eU5RQcKl7zM3UiBz4ZQ_JHJx3ZvZMwCRKGRJvhUeVRLQXn5VhoxF1GwUJECEddbBrBQ",
+      "expect": {
+        "contentSha256": "cbc1a7e9717550ce780c5cf6ecd75c80aadf53c817715a72f310b2f777d13511",
+        "signatureB64url": "FmbmPBjRg79yIzKhQK7eU5RQcKl7zM3UiBz4ZQ_JHJx3ZvZMwCRKGRJvhUeVRLQXn5VhoxF1GwUJECEddbBrBQ"
+      },
+      "receipt": {
+        "version": "0.1",
+        "receiptId": "rcpt-00000001",
+        "manifestSha256": "899583068df9a37b24f127615f2e8eab42bcd4c7cb73d6f0fb134afa7d94bce8",
+        "agent": "https://agent.example/",
+        "purpose": "retrieval",
+        "issuedAt": "2026-09-19T12:00:00Z"
+      }
+    }
+  ],
+  "invalid": [
+    {
+      "name": "signature bit flipped",
+      "token": "eyJjb250ZW50U2hhMjU2IjoiY2JjMWE3ZTk3MTc1NTBjZTc4MGM1Y2Y2ZWNkNzVjODBhYWRmNTNjODE3NzE1YTcyZjMxMGIyZjc3N2QxMzUxMSIsImV4cGlyZXNBdCI6IjIwOTktMDEtMDFUMDA6MDA6MDBaIiwibGljZW5zZSI6Imh0dHBzOi8vZXhhbXBsZS5jb20vIiwicHVibGlzaGVkQXQiOiIyMDI2LTA5LTE5VDAwOjAwOjAwWiIsInB1Ymxpc2hlciI6IkV4YW1wbGUgU3RvcmUiLCJzdWJqZWN0IjoiaHR0cHM6Ly9leGFtcGxlLmNvbS9sbG1zLnR4dCIsInVzZSI6eyJhdHRyaWJ1dGlvbiI6InJlcXVpcmVkIiwiY29tbWVyY2lhbCI6InVuc3BlY2lmaWVkIiwicmV0cmlldmFsIjoiYWxsb3ciLCJ0cmFpbmluZyI6InVuc3BlY2lmaWVkIn0sInZlcnNpb24iOiIwLjEifQ.FmbmPBjRg79yIzKhQK7eU5RQcKl7zM3UiBz4ZQ_JHJx3ZvZMwCRKGRJvhUeVRLQXn5VhoxF1GwUJECEddbBrAQ",
+      "error": "Invalid signature"
+    },
+    {
+      "name": "body changed after signing",
+      "token": "eyJjb250ZW50U2hhMjU2IjoiY2JjMWE3ZTk3MTc1NTBjZTc4MGM1Y2Y2ZWNkNzVjODBhYWRmNTNjODE3NzE1YTcyZjMxMGIyZjc3N2QxMzUxMSIsImV4cGlyZXNBdCI6IjIwOTktMDEtMDFUMDA6MDA6MDBaIiwibGljZW5zZSI6Imh0dHBzOi8vZXhhbXBsZS5jb20vIiwicHVibGlzaGVkQXQiOiIyMDI2LTA5LTE5VDAwOjAwOjAwWiIsInB1Ymxpc2hlciI6IkV4YW1wbGUgU3RvcmUiLCJzdWJqZWN0IjoiaHR0cHM6Ly9leGFtcGxlLmNvbS9sbG1zLnR4dCIsInVzZSI6eyJhdHRyaWJ1dGlvbiI6InJlcXVpcmVkIiwiY29tbWVyY2lhbCI6InVuc3BlY2lmaWVkIiwicmV0cmlldmFsIjoiZGVueSIsInRyYWluaW5nIjoidW5zcGVjaWZpZWQifSwidmVyc2lvbiI6IjAuMSJ9.FmbmPBjRg79yIzKhQK7eU5RQcKl7zM3UiBz4ZQ_JHJx3ZvZMwCRKGRJvhUeVRLQXn5VhoxF1GwUJECEddbBrBQ",
+      "error": "Invalid signature"
+    },
+    {
+      "name": "three segments",
+      "token": "eyJjb250ZW50U2hhMjU2IjoiY2JjMWE3ZTk3MTc1NTBjZTc4MGM1Y2Y2ZWNkNzVjODBhYWRmNTNjODE3NzE1YTcyZjMxMGIyZjc3N2QxMzUxMSIsImV4cGlyZXNBdCI6IjIwOTktMDEtMDFUMDA6MDA6MDBaIiwibGljZW5zZSI6Imh0dHBzOi8vZXhhbXBsZS5jb20vIiwicHVibGlzaGVkQXQiOiIyMDI2LTA5LTE5VDAwOjAwOjAwWiIsInB1Ymxpc2hlciI6IkV4YW1wbGUgU3RvcmUiLCJzdWJqZWN0IjoiaHR0cHM6Ly9leGFtcGxlLmNvbS9sbG1zLnR4dCIsInVzZSI6eyJhdHRyaWJ1dGlvbiI6InJlcXVpcmVkIiwiY29tbWVyY2lhbCI6InVuc3BlY2lmaWVkIiwicmV0cmlldmFsIjoiYWxsb3ciLCJ0cmFpbmluZyI6InVuc3BlY2lmaWVkIn0sInZlcnNpb24iOiIwLjEifQ.FmbmPBjRg79yIzKhQK7eU5RQcKl7zM3UiBz4ZQ_JHJx3ZvZMwCRKGRJvhUeVRLQXn5VhoxF1GwUJECEddbBrBQ.x",
+      "error": "Malformed signed manifest"
+    }
+  ]
+}
