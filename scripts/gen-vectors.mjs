@@ -27,7 +27,7 @@ const receipt = await createReceipt(manifest, "https://agent.example/", "retriev
 const flip = (s) => s.slice(0, -2) + (s.at(-2) === "A" ? "B" : "A") + s.at(-1);
 
 const out = {
-  protocol: "PARP/0.1",
+  protocol: "ARPP/0.1",
   note: "Key is RFC 8032 7.1 TEST 1. Public test material: never sign real manifests with it.",
   publicKeyJwk: { kty: "OKP", crv: "Ed25519", x, alg: "EdDSA", use: "sig" },
   valid: [{

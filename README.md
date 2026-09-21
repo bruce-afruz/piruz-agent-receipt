@@ -30,12 +30,12 @@ neutral shared registry names. The quickest way in:
 
 - **Port the verifier** to Python, Go, Rust, Java, Ruby or Swift and reproduce
   [`test-vectors/v0.1.json`](test-vectors/v0.1.json). Passing the vectors means you interoperate.
-- **Pick an issue** labelled [`good first issue`](https://github.com/bruce-afruz/piruz-agent-receipt/labels/good%20first%20issue)
-  or [`help wanted`](https://github.com/bruce-afruz/piruz-agent-receipt/labels/help%20wanted).
-- **Publish PARP on your site** with a starter from
+- **Pick an issue** labelled [`good first issue`](https://github.com/bruce-afruz/arpp/labels/good%20first%20issue)
+  or [`help wanted`](https://github.com/bruce-afruz/arpp/labels/help%20wanted).
+- **Publish ARPP on your site** with a starter from
   [parp-integrations](https://github.com/bruce-afruz/parp-integrations), then file an interoperability report.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md), or open a [Discussion](https://github.com/bruce-afruz/piruz-agent-receipt/discussions).
+See [CONTRIBUTING.md](CONTRIBUTING.md), or open a [Discussion](https://github.com/bruce-afruz/arpp/discussions).
 Public deployment evidence is welcome only with the deployer's permission.
 
 ## Implementations

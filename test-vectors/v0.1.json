@@ -1,5 +1,5 @@
 {
-  "protocol": "PARP/0.1",
+  "protocol": "ARPP/0.1",
   "note": "Key is RFC 8032 7.1 TEST 1. Public test material: never sign real manifests with it.",
   "publicKeyJwk": {
     "kty": "OKP",

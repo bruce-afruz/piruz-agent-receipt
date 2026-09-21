@@ -14,7 +14,7 @@ authentication and contracts.
 Use HTTPS. A publisher serves a signed manifest at a documented endpoint or
 advertises it in an HTTP Link header:
 
-`Link: <https://publisher.example/agent-rights/article.arpp>; rel="https://github.com/bruce-afruz/piruz-agent-receipt/blob/main/SPEC.md#transport"; type="application/vnd.piruz.agent-rights"`
+`Link: <https://publisher.example/agent-rights/article.arpp>; rel="https://github.com/bruce-afruz/arpp/blob/main/SPEC.md#transport"; type="application/vnd.piruz.agent-rights"`
 
 The absolute relation URI is an RFC 8288 extension relation. It needs no IANA
 registration. The vendor media type is deliberately private to the 0.1
