@@ -33,7 +33,7 @@ neutral shared registry names. The quickest way in:
 - **Pick an issue** labelled [`good first issue`](https://github.com/bruce-afruz/arpp/labels/good%20first%20issue)
   or [`help wanted`](https://github.com/bruce-afruz/arpp/labels/help%20wanted).
 - **Publish ARPP on your site** with a starter from
-  [parp-integrations](https://github.com/bruce-afruz/parp-integrations), then file an interoperability report.
+  [arpp-integrations](https://github.com/bruce-afruz/arpp-integrations), then file an interoperability report.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md), or open a [Discussion](https://github.com/bruce-afruz/arpp/discussions).
 Public deployment evidence is welcome only with the deployer's permission.
@@ -43,7 +43,7 @@ Public deployment evidence is welcome only with the deployer's permission.
 | Implementation | Role | Language | Independent |
 |---|---|---|---|
 | This repository (reference) | Publisher + verifier | TypeScript | — |
-| [parp-integrations](https://github.com/bruce-afruz/parp-integrations) v1.0.1 | Publisher | Node, PHP, .NET, Shopify, WordPress, OpenCart | No (same author) |
+| [arpp-integrations](https://github.com/bruce-afruz/arpp-integrations) v1.0.1 | Publisher | Node, PHP, .NET, Shopify, WordPress, OpenCart | No (same author) |
 | [llmboo.com](https://llmboo.com/agent-rights) | Live deployment | Node | No (same author) |
 | *Yours here* | | | |
 ## IANA strategy
