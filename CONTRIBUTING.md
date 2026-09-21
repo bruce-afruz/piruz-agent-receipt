@@ -1,6 +1,6 @@
-# Contributing to PARP
+# Contributing to ARPP
 
-PARP becomes a shared standard only when people outside Piruz Afruz MB implement it.
+ARPP becomes a shared standard only when people outside Piruz Afruz MB implement it.
 An independent implementation is the most valuable thing you can contribute.
 
 ## Fastest ways to help

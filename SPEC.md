@@ -1,10 +1,10 @@
-# Piruz Agent Receipt Protocol (PARP) 0.1
+# Agent Rights & Provenance Protocol (ARPP) 0.1
 
 An open protocol initiated by Piruz Afruz MB, Lithuania. Version 0.1, released as v0.1.0.
 
 ## Purpose
 
-PARP lets a publisher attach a signed rights manifest to a web resource and lets
+ARPP lets a publisher attach a signed rights manifest to a web resource and lets
 an agent create a privacy-preserving receipt tied to that exact manifest. It is
 not DRM, legal advice, proof that an agent obeyed a policy, or a replacement for
 authentication and contracts.
@@ -14,7 +14,7 @@ authentication and contracts.
 Use HTTPS. A publisher serves a signed manifest at a documented endpoint or
 advertises it in an HTTP Link header:
 
-`Link: <https://publisher.example/agent-rights/article.parp>; rel="https://github.com/bruce-afruz/piruz-agent-receipt/blob/main/SPEC.md#transport"; type="application/vnd.piruz.agent-rights"`
+`Link: <https://publisher.example/agent-rights/article.arpp>; rel="https://github.com/bruce-afruz/piruz-agent-receipt/blob/main/SPEC.md#transport"; type="application/vnd.piruz.agent-rights"`
 
 The absolute relation URI is an RFC 8288 extension relation. It needs no IANA
 registration. The vendor media type is deliberately private to the 0.1
@@ -45,7 +45,11 @@ that its issuer created that record; it does not prove access, compliance,
 attribution, payment or training. Publishers must make receipt collection opt-in
 and state retention policy.
 
-## Registration path
+## Naming and registration path
+
+The former working name PARP is a legacy alias. New implementations SHOULD use
+ARPP in documentation and deployment paths; existing `/parp` endpoints MAY remain
+available during migration.
 
 After two independent deployments and published interoperability evidence, propose
 a neutral, non-trademarked media type and a registered short link relation through

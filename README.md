@@ -1,4 +1,4 @@
-# Piruz Agent Receipt Protocol
+# Agent Rights & Provenance Protocol (ARPP)
 
 Open-source, signed publisher rights manifests and agent-use receipts, initiated
 by **Piruz Afruz MB, Lithuania**. MIT licensed. Version 0.1 is released as v0.1.0.
@@ -25,7 +25,7 @@ service and not an IANA-registered scheme, media type or link relation.
 
 ## Join the work
 
-PARP needs independent implementations and security review before it can seek
+ARPP needs independent implementations and security review before it can seek
 neutral shared registry names. The quickest way in:
 
 - **Port the verifier** to Python, Go, Rust, Java, Ruby or Swift and reproduce
@@ -46,10 +46,10 @@ Public deployment evidence is welcome only with the deployer's permission.
 | [parp-integrations](https://github.com/bruce-afruz/parp-integrations) v1.0.1 | Publisher | Node, PHP, .NET, Shopify, WordPress, OpenCart | No (same author) |
 | [llmboo.com](https://llmboo.com/agent-rights) | Live deployment | Node | No (same author) |
 | *Yours here* | | | |
-
 ## IANA strategy
 
-PARP 0.1 uses an absolute extension relation and a vendor media type.
+ARPP 0.1 uses an absolute extension relation and a vendor media type.
 They work immediately over HTTPS. Register shared generic names only when other
 organizations independently implement the protocol; this directly addresses the
-URI-registry feedback received for the generic `llm` scheme.
+URI-registry feedback received for the generic `llm` scheme. The former working
+name PARP is retained only as a migration alias in existing deployments.

@@ -1,7 +1,7 @@
 {
   "name": "piruz-agent-receipt",
   "version": "0.1.0",
-  "description": "Signed publisher rights manifests and agent-use receipts",
+  "description": "Agent Rights & Provenance Protocol: signed publisher rights manifests and receipts",
   "type": "module",
   "license": "MIT",
   "author": "Piruz Afruz MB",
